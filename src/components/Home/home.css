@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 20px;
+}
+
+.cardProduct {
+    display: flex;
+    width: 200px;
+    height: 250px;
+    padding: 50px;
+    margin: 50px;
+    border: 1px solid black;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+.card_img {
+    height: 180px;
+}
+
+.detail {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    
+}
+
+.detail_button {
+    width: 50%;
+    border-color: #396ED2;
+    border-radius: 10px;
+    background-color: #396ED2;
+}
+
+.card_title {
+    font-size: 1rem;
+}

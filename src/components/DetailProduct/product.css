@@ -1,0 +1,22 @@
+.containerPa {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+.container1 {
+    display: flex;
+    width: 600px;
+    height: 500px;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    font-size: 1rem;
+}
+
+.img {
+    width: 100px;
+    height: 200px;
+}
