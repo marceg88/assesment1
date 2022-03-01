@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './product.css';
 
-export function Product() {
+function Product() {
   const { productId } = useParams();
   const [dataFake, setDataFake] = useState([]);
 
@@ -14,34 +14,34 @@ export function Product() {
   };
   useEffect(() => {
     fakeStoreApi();
-  }, [productId]);
+  }, [fakeStoreApi, productId]);
 
   if (!dataFake.id) {
-    return <h1></h1>;
+    return <h1>...</h1>;
   }
   return (
     <div className="containerPa">
       <div className="container1">
-        <h3>{dataFake.title}</h3>
-        <p>{dataFake.price}</p>
-        <p>{dataFake.description}</p>
-        <p>{dataFake.category}</p>
+        <p className="category">Category: {dataFake.category}</p>
+        <h3 className="title">{dataFake.title}</h3>
         <div>
           <img className="img" src={dataFake.image} alt="imageProduct" />
         </div>
-        
-        <p>
-          rate:
-          {dataFake.rating.rate}
-        </p>
-        <p>
-          calification:
-          {dataFake.rating.count}
-        </p>
+        <p className="description">{dataFake.description}</p>
+        <div className="container_2">
+          <p className="price">${dataFake.price} USD</p>
+          <p>
+            rate:
+            {dataFake.rating.rate}
+          </p>
+          <p>
+            calification:
+            {dataFake.rating.count}
+          </p>
+        </div>
       </div>
     </div>
-    
   );
 }
 
-
+export default Product;

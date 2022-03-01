@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 
 import './home.css';
 
-import  ProductCard  from './productCard';
+import ProductCard from './productCard';
 
 function ListProduct() {
   const [dataFake, setDataFake] = useState([]);

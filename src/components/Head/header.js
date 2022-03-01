@@ -1,5 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { faBarcode } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import './header.css';
 
@@ -21,14 +23,15 @@ function Header() {
         className="head_button_one"
         onClick={handleButtonHome}
       >
-        Home
+        HOME
       </button>
+      <FontAwesomeIcon className="icon" icon={faBarcode} size="6x" />
       <button
         type="submit"
         className="head_button_two"
         onClick={handleButtonAbout}
       >
-        About
+        ABOUT
       </button>
     </div>
   );
